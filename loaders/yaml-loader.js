@@ -1,6 +1,6 @@
-import jsyaml from 'js-yaml';
+const jsyaml = require('js-yaml');
 
-export default async function multiFile(source) {
+module.exports = async function multiFile(source) {
   const parsed = jsyaml.load(source);
   return JSON.stringify(parsed);
-}
+};
